@@ -9,8 +9,10 @@
     <version>1.0.0</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <jupiter.version>5.10.0</jupiter.version>
+        <jackson.version>2.17.1</jackson.version>
     </properties>
     <build>
         <plugins>
@@ -19,7 +21,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>11</release>
+                    <release>17</release>
                 </configuration>
             </plugin>
         </plugins>
@@ -30,7 +32,6 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.8.1</version>
         </dependency>
-
         <!-- Junit5 Dependency -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -38,7 +39,6 @@
             <version>${jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-
         <!-- JUnit3 and Junit4 Adapter Dependency for Legacy Testing -->
         <dependency>
             <groupId>org.junit.vintage</groupId>
@@ -46,16 +46,11 @@
             <version>${jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
         </dependency>
-
     </dependencies>
-
-
-
 </project>
