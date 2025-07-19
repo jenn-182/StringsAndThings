@@ -14,6 +14,10 @@ public class StringsAndThings {
      *           countYZ("day fez"); // Should return 2
      *           countYZ("day fyyyz"); // Should return 2
      */
+
+     // look at a sentence and count how many words finish with a 'y' or a 'z'
+     // the 'y' or 'z' only counts if it's truly at the end of a word, meaning there's no normal letter right after it
+
     public Integer countYZ(String input) {
         // Initialize a counter for 'y' and 'z' at the end of words
         int count = 0;
@@ -50,6 +54,10 @@ public class StringsAndThings {
      *           removeString("Hello there", "e") //  Should return "Hllo thr"
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
+
+
+     // take a main sentence (base) and remove all occurrences of a smaller word or phrase (remove) from it
+
     public String removeString(String base, String remove){
         
         //Simplest solution:
@@ -96,6 +104,9 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("This is notnot") // Should return true
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
+
+     //check if the number of times "is" appears in a sentence is exactly the same as the number of times "not" appears
+
     public Boolean containsEqualNumberOfIsAndNot(String input){
         
         // Initialize counters for "is" and "not"
@@ -135,6 +146,11 @@ public class StringsAndThings {
      *           gHappy("xxgxx") // Should return  false
      *           gHappy("xxggyygxx") // Should return  false
      */
+
+     //find all the lowercase 'g's in a sentence
+     // A 'g' is "happy" if it has another 'g' right next to it, either on its left or its right
+     // Needs to tell us if all the 'g's are happy
+
     public Boolean gIsHappy(String input){
 
         // Initialize a boolean variable to track happiness
@@ -174,6 +190,10 @@ public class StringsAndThings {
      *            countTriple("xxxabyyyycd") // Should return 3
      *            countTriple("a") // Should return 0
      */
+
+     // find groups of the same letter appearing three times in a row ("triples")
+     // needs to count how many such groups there are
+     
     public Integer countTriple(String input){
         // Initialize a counter for triples
         int count = 0;
